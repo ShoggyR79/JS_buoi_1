@@ -1,0 +1,6 @@
+.outputdisplay{
+    display: block !important;
+    background-color:aquamarine;
+    font-size: 30px;
+    text-align: center;
+}
