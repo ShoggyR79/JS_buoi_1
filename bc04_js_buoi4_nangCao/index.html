@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+            <div class ="col-md-4">
+                <div class="card">
+                    <div class="card-header"><h1 class= "text-success">Tính Ngày Kề</h1></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Ngày</label>
+                                <input type="number" id="day" class="form-control" placeholder="Nhập ngày">
+                            </div>
+                            <div class="form-group">
+                                <label>Tháng</label>
+                                <input type="number" id="month" class="form-control" placeholder="Nhập tháng">
+                            </div>
+                            <div class="form-group">
+                                <label>Năm</label>
+                                <input type="number" id="year" class="form-control" placeholder="Nhập năm">
+                            </div>
+                            <button type="submit" class="btn btn-success" onclick="adjacentDates(event)">Ngày kề bên</button>
+                        </form>
+                    </div>
+                    <div id="footerDates" class="card-footer d-none">
+                    <p style="font-size: 16px;">
+                        Ngày Trước:   <span id = "previousDayOutput">0</span> <br>
+                        Ngày Kế:      <span id = "nextDayOutput">0</span>
+                    </p>
+                    </div>
+                  </div>
+            </div>
+            <div class ="col-md-4">
+                <div class="card">
+                    <div class="card-header"><h2 class= "text-success">Bao nhiêu ngày trong tháng</h2></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Tháng</label>
+                                <input type="number" id="month2" class="form-control" placeholder="Nhập tháng">
+                            </div>
+                            <div class="form-group">
+                                <label>Năm</label>
+                                <input type="number" id="year2" class="form-control" placeholder="Nhập năm">
+                            </div>
+                            <button type="submit" class="btn btn-success" onclick="numOfDays(event)">Tìm</button>
+                        </form>
+                    </div>
+                    <div id="footerNumDates" class="card-footer d-none">
+                    <p style="font-size: 16px;">
+                        Số Ngày:      <span id = "daysOutput">0</span>
+                    </p>
+                    </div>
+                  </div>
+            </div>
+            <div class ="col-md-4">
+                <div class="card">
+                    <div class="card-header"><h2 class= "text-success">Cách đọc số</h2></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Nhập số nguyên có 3 chữ số:</label>
+                                <input type="number" id="threeDigitNum" class="form-control" placeholder="Nhập số">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success" onclick="howToRead(event)">Đọc</button>
+                        </form>
+                    </div>
+                    <div id="footerRead" class="card-footer d-none">
+                        <p style="font-size: 16px;">
+                            Cách Đọc:      <span id = "readOutput">0</span>
+                        </p>
+                    </div>
+                  </div>
+            </div>
+
+            <div class ="col-md-12">
+                <div class="card">
+                    <div class="card-header"><h1 class= "text-success">Tính Khoảng Cách ( x , y )</h1></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="row">
+                                   <div class="col-md-2 mr-0 small-padding "><h4>Sinh Viên 1:</h4></div>
+                                   <div class="col-md-3">
+                                       <div class="row">
+                                            <div class="col-md-3 pr-0"> <h5>Tên:</h5> </div>
+                                            <div class="col-md-8"><input type="text" id="studentOneName" class="form-control" placeholder="Tên HS1"></div>
+                                       </div>
+                                   </div>
+
+                                   <div class="row">
+                                       <div class="col-md-3">
+                                            <h5>Tọa Độ:</h5>
+                                       </div>
+                                       <div class="col-md-9">
+                
+                                            <div class="row">
+                                                 <h3>(</h3><div class= "col-md-5">
+                                                     <input type="number" id="studentOneX" class="form-control" placeholder="Tọa Độ X">
+                                                 </div> <h3>,</h3>
+                                                 <div class= "col-md-5">
+                                                     <input type="number" id="studentOneY" class="form-control" placeholder="Tọa Độ Y">
+                                                 </div>  <h3>)</h3>                                 
+                                            </div>
+                                       
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                   <div class="col-md-2 mr-0 small-padding "><h4>Sinh Viên 2:</h4></div>
+                                   <div class="col-md-3">
+                                       <div class="row">
+                                            <div class="col-md-3 pr-0"> <h5>Tên:</h5> </div>
+                                            <div class="col-md-8"><input type="text" id="studentTwoName" class="form-control" placeholder="Tên HS2"></div>
+                                       </div>
+                                   </div>
+
+                                   <div class="row">
+                                       <div class="col-md-3">
+                                            <h5>Tọa Độ:</h5>
+                                       </div>
+                                       <div class="col-md-9">
+                
+                                            <div class="row">
+                                                 <h3>(</h3><div class= "col-md-5">
+                                                     <input type="number" id="studentTwoX" class="form-control" placeholder="Tọa Độ X">
+                                                 </div> <h3>,</h3>
+                                                 <div class= "col-md-5">
+                                                     <input type="number" id="studentTwoY" class="form-control" placeholder="Tọa Độ Y">
+                                                 </div>  <h3>)</h3>                                 
+                                            </div>
+                                       
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                   <div class="col-md-2 mr-0 small-padding "><h4>Sinh Viên 3:</h4></div>
+                                   <div class="col-md-3">
+                                       <div class="row">
+                                            <div class="col-md-3 pr-0"> <h5>Tên:</h5> </div>
+                                            <div class="col-md-8"><input type="text" id="studentThreeName" class="form-control" placeholder="Tên HS1"></div>
+                                       </div>
+                                   </div>
+
+                                   <div class="row">
+                                       <div class="col-md-3">
+                                            <h5>Tọa Độ:</h5>
+                                       </div>
+                                       <div class="col-md-9">
+                
+                                            <div class="row">
+                                                 <h3>(</h3><div class= "col-md-5">
+                                                     <input type="number" id="studentThreeX" class="form-control" placeholder="Tọa Độ X">
+                                                 </div> <h3>,</h3>
+                                                 <div class= "col-md-5">
+                                                     <input type="number" id="studentThreeY" class="form-control" placeholder="Tọa Độ Y">
+                                                 </div>  <h3>)</h3>                                 
+                                            </div>
+                                       
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <br>
+                            <div class="form-group">
+                                <div class="row">
+                                   <div class="col-md-4 "><h5>Tọa Độ Đại Học:</h5></div>
+                                   <div class="col-md-8">
+                                       <div class="row">
+                                            <h3>(</h3><div class= "col-md-5">
+                                                <input type="number" id="collegeX" class="form-control" placeholder="Tọa Độ X">
+                                            </div> <h3>,</h3>
+                                            <div class= "col-md-5">
+                                                <input type="number" id="collegeY" class="form-control" placeholder="Tọa Độ Y">
+                                            </div>  <h3>)</h3>                                 
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <button type="submit" class="btn btn-success" onclick="distanceCalc(event)">Tìm Sinh Viên Xa Trường Nhất</button>
+                        </form>
+                    </div>
+                    <div id="footerDistance" class="card-footer d-none">
+                    <p style="font-size: 16px;">
+                        Tên HS:   <span id = "studentNameOutput">0</span> <br>
+                        Khoảng Cách:      <span id = "studentDistanceOutput">0</span>
+                    </p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

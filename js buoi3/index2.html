@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Đăng Nhập</div>
+                <div class="card-body">
+                    <form>
+                    <div class="form-group">
+                        <label for="usr">Tài Khoản:</label>
+                        <input id="idInput" type="text" class="form-control"/>
+                      </div>
+                    <div class="form-group">
+                        <label for="usr">Mật Khẩu:</label>
+                        <input id="passwordInput" type="password" class="form-control"/>
+                    </div>
+                    <!--button type submit to phép người dùng enter-->
+                    <button type = "submit" class="btn-secondary" onclick="login(event)">Đăng Nhập</button>
+                </form>
+                </div>
+                <div id="footer"class="card-footer d-none">
+                    <div>
+                        Tài Khoản: <span id="username"></span> 
+                    </div>
+                    <div>
+                        Mật Khẩu: <span id="password"></span>
+                    </div>
+                </div>
+                    
+                    
+            </div>
+                  
+        </div>
+        </div>
+    </div>
+
+    <hr />
+    <div class="container">
+        <div class = "row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Tính Tiền Tip</h1>
+                    </div>
+                <form>
+                    <div class="card-body">
+                        <div class="form-group">
+                          <label>Tổng Tiền Thanh Toán</label>
+                          <input type="number"  id="totalAmount" class="form-control" placeholder="Số tiền trong bill">   
+                        </div>
+                        <div class="form-group">
+                            <label>Bạn Muốn Tip Bao Nhiêu</label>
+                          <select class = "form-control" id = "tipAmount">
+
+                              <option value="0.10">10%</option>
+                              <option value="0.15">15%</option>
+                              <option value="0.20">20%</option>
+                              <option value="0.25">25%</option>
+                              <option value="0.30">30%</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Bạn muốn chia bao nhiêu người</label>
+                            <input type="number" id="splitPerson" class="form-control" placeholder="Số Người">   
+                        </div>
+                        <button class="btn btn-success" onclick="calculateTip(event)">Tính Tiền</button>
+                        
+                        
+                    </div>
+                </form>
+                    <div id="footer2" class="card-footer d-none">
+                        <h3>
+                        $<span id="payPerPerson">10</span> Mỗi Người
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-info" onclick="taoTheDiv()">Tạo Thẻ Div</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./main2.js"></script>
+
+  </body>
+</html>

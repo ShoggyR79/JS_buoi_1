@@ -51,3 +51,22 @@ function minus(){
     var output = "Kết Quả: " + difference;
     document.getElementById("result").innerHTML = output;
 }
+
+
+
+function onBulb(){
+    document.getElementById("bulb").src = "img/pic_bulbon.gif";  
+    document.getElementById("onButton").disabled = true;
+    document.getElementById("offButton").disabled = false;
+
+}
+function offBulb(){
+    document.getElementById("bulb").src = "img/pic_bulboff.gif";
+    document.getElementById("offButton").disabled = true;
+    document.getElementById("onButton").disabled = false;
+
+}
+
+function login(){
+
+}

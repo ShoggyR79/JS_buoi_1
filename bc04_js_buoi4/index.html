@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class ="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h1 class= "text-success">Xếp thứ tự số</h1></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Số 1</label>
+                                <input type="number" id="num1" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            <div class="form-group">
+                                <label>Số 2</label>
+                                <input type="number" id="num2" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            <div class="form-group">
+                                <label>Số 3</label>
+                                <input type="number" id="num3" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            <button type="submit" class="btn btn-success" onclick="findMax(event)">Sắp Xếp</button>
+                        </form>
+                    </div>
+                    <div id="footerOrder" class="card-footer d-none">
+                      <p style="font-size: 16px;">Số lơn nhất   <span id = "maxOutput">0</span> </p>
+                    </div>
+                  </div>
+            </div>
+            <div class ="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h1 class= "text-success">Chào Hỏi</h1></div>
+                    <div class="card-body">
+                        <form>
+                            <label>Ai Đang Dùng Máy?</label>
+                            <div class="form-group">
+                                
+                                <select class="form-group" id="userType">
+                                    <option value="B">Bố</option>
+                                    <option value="M">Mẹ</option>
+                                    <option value="A">Anh Trai</option>
+                                    <option value="E">Em Gái</option>
+                                </select>
+
+                            </div>
+                            <button type="submit" class="btn btn-success" onclick="greeting(event)">Vô máy</button>
+                        </form>
+                    </div>
+                    <div id="footerGreeting" class="card-footer d-none">
+                      <p style="font-size: 16px;">Chào:   <span id = "greetingOutput">X</span> </p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class ="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h1 class= "text-success">Tính Tiền Lương</h1></div>
+                    <div class="card-body">
+                        <form>  
+                            <div class="form-group">
+                                <label>Tổng Giờ Làm</label>
+                                <input type="number" id="hoursWorked" class="form-control" placeholder="Số Lượng">
+                            </div>
+                            <div class="form-group">
+                              <label>Lương mỗi giờ làm bình thường</label>
+                              <input type="number" id="rate" class="form-control" placeholder="Số Lượng">   
+                          </div>
+                            <button type="submit" class="btn btn-success" onclick="calculateSalary(event)">Tính Tiền</button>
+                        </form>
+                    </div>
+                    <div id="footerSalary" class="card-footer d-none">
+                      <p style="font-size: 16px;">Lương: <span id = "salaryOutput">0</span> VND</p>
+                  </div>
+                </div>
+            </div>
+            <div class ="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h1 class= "text-success">Đếm Chẵn Hoặc Lẽ</h1></div>
+                    <div class="card-body">
+                        <form>  
+                            <div class="form-group">
+                                <label>Số Thứ Nhất</label>
+                                <input type="number" id="bai3num1" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            <div class="form-group">
+                                <label>Số Thứ Hai</label>
+                                <input type="number" id="bai3num2" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            <div class="form-group">
+                                <label>Số Thứ Ba</label>
+                                <input type="number" id="bai3num3" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success" onclick="countOddEven(event)">Đếm</button>
+                        </form>
+                    </div>
+                    <div id="footerOddEven" class="card-footer d-none">
+                      <p style="font-size: 16px;">Số Chẵn: <span id = "evenOutput">0</span> <br> Số Lẽ: <span id = "oddOutput">0</span></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class ="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h1 class= "text-success">Tam Giác Gì?</h1></div>
+                    <div class="card-body">
+                        <form>  
+                            <div class="form-group">
+                                <label>Cạnh Thứ Nhất</label>
+                                <input type="number" id="side1" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            <div class="form-group">
+                                <label>Cạnh Thứ Hai</label>
+                                <input type="number" id="side2" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            <div class="form-group">
+                                <label>Cạnh Thứ Ba</label>
+                                <input type="number" id="side3" class="form-control" placeholder="Nhập Số">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success" onclick="whatTriangle(event)">Nhập</button>
+                        </form>
+                    </div>
+                    <div id="footerTriangle" class="card-footer d-none">
+                      <p style="font-size: 16px;">Thể loại tam giác:  <span id = "triangleOutput">0</span></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

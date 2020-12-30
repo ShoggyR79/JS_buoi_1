@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class ="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h1 class= "text-success">Tính phí lãi suất</h1></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Tổng Sử Dụng</label>
+                                <input type="number" id="totalUsage" class="form-control" placeholder="Số Lượng">
+                            </div>
+                            <div class="form-group">
+                                <label>Số Lượng Đã Trả</label>
+                                <input type="number" id="totalPaid" class="form-control" placeholder="Số Lượng">
+                            </div>
+                            <button type="submit" class="btn btn-success" onclick="tinhTienPhat(event)">Tính Tiền Phạt</button>
+                        </form>
+                    </div>
+                    <div id="footerTienPhat" class="card-footer d-none">
+                      <p style="font-size: 16px;">Số tiền PHẠT phải trả là: <span id = "tienPhatOutput">0</span> VND</p>
+                    </div>
+                  </div>
+            </div>
+            <div class ="col-md-6">
+              <div class="card">
+                  <div class="card-header"><h1 class= "text-success">Tính Tiền Lương</h1></div>
+                  <div class="card-body">
+                      <form>
+                          <div class="form-group">
+                              <label>Tổng Giờ Làm</label>
+                              <input type="number" id="hoursWorked" class="form-control" placeholder="Số Lượng">
+                          </div>
+                          <div class="form-group">
+                            <label>Lương mỗi giờ làm bình thường</label>
+                            <input type="number" id="rate" class="form-control" placeholder="Số Lượng">   
+                        </div>
+                          <button type="submit" class="btn btn-success" onclick="calculateSalary(event)">Tính Tiền</button>
+                      </form>
+                  </div>
+                  <div id="footerSalary" class="card-footer d-none">
+                    <p style="font-size: 16px;">Lương: <span id = "salaryOutput">0</span> VND</p>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>  
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <h2>Demo tính tiền sản phẩm</h2>
+          <form>
+            <div class="form-group">
+              <label for="">Tên sản phẩm</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập tên sản phẩm"
+                id = "productName"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Số lượng</label>
+              <input type="text" class="form-control" id="productAmount" placeholder="Nhập số lượng" />
+            </div>
+            <div class="form-group">
+              <label for="">Đơn giá</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập số tiền một sản phẩm"
+                id = "pricePerUnit"
+              />
+            </div>
+            <button type="submit" class="btn btn-success" onclick="calcCost(event)">Tính tiền</button>
+            <p id="thongBao"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script src="./muahang.js"></script>
+  </body>
+</html>

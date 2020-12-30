@@ -1,0 +1,472 @@
+*{
+    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size : 16px;
+    font-weight : 200;
+}
+
+.header{
+    position:absolute;
+    top:40px;
+    left:0;
+    z-index:10;
+
+    width:100%;
+
+}
+.header_detail i,.header_detail span{
+    font-size: 14px;
+}
+
+.header_detail span{
+    border-color:rgba(255,255,255,0.2) !important;
+}
+
+.header_navbar .nav-item .nav-link{
+    color:white;
+    font-size : 20px;
+}
+
+.header_navbar .navbar-nav{
+    border-color:rgba(255,255,255,0.2) !important;
+}
+
+.header_navbar .nav-item{
+    position:relative;
+}
+
+.header_navbar .nav-item:before{
+    content: '';
+    width:0;
+    height: 3px;
+    background-image: linear-gradient(to right, #fbbd61, #ec7532);
+    position: absolute;
+    bottom: -1px;
+    left:0;
+    transition:all 0.5s;
+
+}
+
+.header_navbar .nav-item.active:before, .header_navbar .nav-item:hover::before{
+    width:100%;
+}
+
+
+
+/*Carousel CSS*/
+
+.carousel-item_overlay  {
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background:linear-gradient(to top, black, transparent)
+}
+
+.carousel-item_caption{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    padding-right: 25%;
+}
+
+.carousel-item_caption span{
+    color:#fbbd61;
+    font-size:14px;
+    letter-spacing: 2px;
+}
+
+.carousel-item_caption p{
+    font-size: 18px;
+}
+
+.carousel-item_trailer span{
+    width: 40px;
+    height:40px;
+    border:2px solid white;
+    line-height: 40px;
+}
+
+.btn-orange{
+    background:linear-gradient(to right, #fbbd61, #ec7532);
+    border-radius: 40px;
+    font-size:14px;
+    letter-spacing: 2px;
+    padding: 11px 30px;
+}
+
+.my-carousel .carousel-indicators{
+    bottom:50px;
+}
+
+.my-carousel .carousel-indicators li{
+    width: 11px;
+    height:11px;
+    background:transparent;
+    border:2px solid white;
+    border-radius: 50%;
+}
+
+.my-carousel .carousel-indicators li.active{
+    background-color: white;
+}
+
+
+
+/*Movie */
+
+.movie{
+    padding-top:80px;
+}
+
+.movie_title{
+    color: #ec7532;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:40px;
+    padding-bottom:15px;
+    border-radius: 1px solid rgba(0,0,0,0.1);
+    position:relative;
+}
+
+.movie_title:before{
+    content:'';
+    width:200px;
+    height:3px;
+    background-image: linear-gradient(to right, #fbbd61, #ec7532);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+.movie_item{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie_overlay{
+    position: absolute;
+    top:0;
+    left:-400%;
+    transform: skewX(45deg);
+    width:800px;
+    height:100%;
+    background:linear-gradient(to bottom, #fbbd61, #ec7532);
+    transition: all 0.5s;
+}
+
+.movie_item:hover .movie_overlay{
+    left:-100%;
+}
+
+.movie_detail{
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%) scale(0.8);
+    opacity:0;
+    transition:all 0.3s
+}
+
+.movie_item:hover .movie_detail{
+    opacity:1;
+    transform: translateY(-50%) scale(1);
+
+}
+
+.movie_detail i{
+    width:80px;
+    height:80px;
+    font-size:20px;
+    border-radius: 50%;
+    border:2px solid white;
+    line-height: 80px;
+    cursor:pointer
+}
+
+.movie_detail a{
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.movie_detail span{
+    font-size:16px;
+}
+
+.movie_name{
+    font-size:18px;
+}
+
+.movie_star{
+    color: #fbbd61
+}
+.movie_star_grey{
+    color: #b4aea4
+}
+
+
+/*Showtimes*/
+.showtime{
+    padding:80px 0;
+}
+.showtime .nav-tabs .nav-link{
+    position: relative;
+    color: #4a4a4a;
+    padding: 10px 30px;
+}
+.showtime .nav-tabs .nav-link:before{
+    content:'';
+    width:0;
+    height: 3px;
+    background-image: linear-gradient(to right, #fbbd61, #ec7532);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transition: all 0.5s;
+}
+.showtime .nav-tabs .nav-link.active, .showtime .nav-tabs .nav-link:hover{
+    border-color: white white #dee2e6;
+}
+.showtime .nav-tabs .nav-link.active:before, .showtime .nav-tabs .nav-link:hover:before{
+    width: 100%;
+}
+
+.showtime_movie img{
+    border-radius:10px;
+}
+.showtime_list{
+    color: #717171;
+}
+
+.showtime_detail > span{
+    font-size: 14px;
+    color:#ec7532;
+    letter-spacing:2px;
+}
+
+.showtime_detail > h1{
+    font-size: 24px;
+    font-weight:300;
+    letter-spacing : 1px;
+}
+
+.showtime_detail >p{
+    font-size:16px;
+}
+
+.showtime_detail > a{
+    font-size:12px;
+    color: #ec7532;
+    letter-spacing: 3px;
+}
+
+.showtime_list i,.showtime_list span{
+    font-size:14px;
+}
+
+.showtime_length span{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    line-height: 35px;
+}
+
+/*coming*/
+
+*{
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:16px;
+}
+
+.section-title{
+    color:#ec7532;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:40px;
+    padding-bottom:15px;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.section-title:before{
+    content:'';
+    width:160px;
+    height:3px;
+    background-image:linear-gradient(to right, #fbbd61, #ec7532);
+    position: absolute;
+    bottom: -1px;
+    left:0;
+}
+
+.video-play{
+    width:80px;
+    height:80px;
+    font-size:20px;
+    border-radius:50%;
+    border:2px solid white;
+    line-height:80px;
+    cursor:pointer;
+}
+
+.upcoming-movies{
+    background-color: #000;
+}
+.coming_bg{
+    padding:80px 0;
+    background:url('./img/slide-3.png') no-repeat center center;
+    background-size:cover;
+}
+.coming_bg .section-title{
+    color:white;
+}
+
+.coming_detail > span{
+    font-size: 14px;
+    color: #ec7532;
+}
+
+.coming_detail h1{
+    font-weight:300;
+    font-size: 34px;
+}
+
+.coming_detail .fa-star{
+    font-size:14px;
+    color: #fbbd61;
+}
+
+.coming_date{
+    opacity:.75;
+    font-size: 14px;
+}
+
+.coming_detail a{
+    color: #ec7532;
+    letter-spacing: 3px;
+}
+.coming_trailer{
+    position: relative;
+}
+
+.coming_trailer .video-play{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-color: #ec7532;
+    transition: all 0.2s;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming_trailer .video-play:hover{
+    transform:translate(-50%, -50%) scale(0.9);
+}
+
+.coming_item{
+    opacity: 0.4s;
+    transition: all 0.4s;
+}
+
+.coming_item:hover, .coming_item.active{
+    opacity: 1;
+}
+
+.coming_item img{
+    border-radius: 10px;
+}
+
+.coming_item span{
+    font-size:14px;
+    opacity: .75l
+}
+
+.coming_list{
+    padding: 40px 0;
+}
+
+
+.section.small-padding{
+    padding: 50px 0;
+}
+
+.section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+}
+
+.contact p{
+    font-size: 23px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #4a4a4a;
+}
+
+.gradient-text{
+    font-size: 46px !important;  
+    font-weight: 400 !important; 
+    color: transparent;
+    background: linear-gradient(330deg, #fbbd61, #ec7532);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer{
+    z-index:0;
+    right:0;
+    bottom:0;
+    left:0;
+    bottom:0;
+    padding: 75px 0 0;
+    color: #fff;
+    background: #101010
+
+}
+
+footer h6{
+    font-size: 16px;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color:#ec7532;
+    border:none;
+}
+
+footer ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+footer *{
+    font-size:14px;
+    font-weight: 500;
+}
+
+footer ul li a, footer ul li a:active, footer ul li a:visited{
+    font-size: 13px;
+    display: inline-block;
+    padding: 3px 0;
+    letter-spacing: 1.5px;
+    color: #fff !important;
+}
+
+
+footer .fa{
+    display: inline-block;
+    width: 25px;
+
+}
+
+
+footer .copyright{
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
